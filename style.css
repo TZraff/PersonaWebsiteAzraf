@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: #3575ff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -11,4 +16,77 @@ body {
 nav {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cccdce;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: color 0.5s ease-in;
+}
+
+nav a:hover {
+    color: #fdfdfd;
+}
+
+.hero {
+    max-width: 800px;
+    padding: 60px 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero p {
+    line-height: 1.6;
+}
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#featured-projects {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+#featured-projects ol {
+    list-style: none;
+    padding: 0;
+}
+
+#featured-projects article {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in;
+}
+
+#featured-projects h2 {
+    margin-bottom: 25px;
+}
+
+#featured-projects h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+#featured-projects article p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+#featured-projects article:hover {
+    background-color: #3575ff;
+}
+
+#featured-projects h3 a {
+    color : inherit;
+    text-decoration: none;
+}
+
+#featured-projects h3 a:hover {
+    text-decoration: underline;
 }
