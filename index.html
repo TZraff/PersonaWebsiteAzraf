@@ -1,69 +1,121 @@
 <!DOCTYPE html>
-<html lang = "id">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Azraf - Portofolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Azraf's Website</title>
+    <link rel="icon" href="assets/online-student.png">
+    <link href="assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-dark text-light">
+<!-- BAGIAN KEPALA / NAVIGASI -->
+    <header>
+<nav class="navbar navbar-expand-lg">
+    <div class="container py-3">
 
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About me</a>
-                <a href="projects.html">Projects</a>
-                <a href="creativity.html">Creativity</a>
-                <a href="dedicated.html">Dedicated</a>
-                <a href="social.html">Social</a>
-            </nav>
-        </header>
+        <!-- Logo -->
+        <a class="navbar-brand border border-2 border-danger p-2" href="index.html">
+            <strong>PERSONAL'S WEB</strong>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <div class="navbar-nav ms-auto gap-lg-4">
+                <a class="nav-link text-uppercase" href="index.html">HOME</a>
+                <a class="nav-link text-uppercase" href="about.html">ABOUT ME</a>
+                <a class="nav-link text-uppercase" href="projects.html">PROJECTS</a>
+                <a class="nav-link text-uppercase" href="dedicated.html">DEDICATED</a>
+                <a class="nav-link text-uppercase" href="creativity.html">CREATIVITY</a>
+                <a class="nav-link text-uppercase" href="social.html">SOCIAL</a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="container mt-5">
         
-        <main>
-            <section class = "hero">
-                <h1 class="hero-title">Welcome to Azraf's portfolio</h1>
-                <p>Ini adalah website yang berisi identitas singkat serta beberapa project yang sedang saya kembangkan</p>
-                
-            </section>
+        <!-- BAGIAN HERO (Perkenalan Diri) -->
+        <section class="row align-items-center mb-5 pb-5">
+            
+            <!-- Kolom Teks (Kiri) -->
+            <article class="col-md-6 text-center text-md-start pe-md-5">
+                <h1 class="mb-4 text-uppercase">WELCOME TO MY SITE</h1> <!--[cite: 1] -->
+                <p class="fs-5">
+                    I am a computer science student from<br> <!--[cite: 1] -->
+                    Electronical Engineering Polytechnique of<br> <!--[cite: 1] -->
+                    Surabaya<br> <!--[cite: 1] -->
+                    currently, i am working on several projects <!--[cite: 1] -->
+                </p>
+            </article>
 
-            <section  id="featured-projects">
-                <h2>featured projects</h2>
-                <ol>
-                    <li>
-                        <article>
-                            <h3>
-                                <a class = "h3-featured" href="projects.html">Behind The Closed Eyes</a>
-                            </h3>
-                            <p>project game yang saat ini saya kembangkan.
-                                Behind The Closed Eyes adalah game horror yang menggunakan tutup dan buka mata sebagai inti mekaniknya.
-                                singkatnya, ghost dari game ini akan memburu player dan hanya bisa dilihat ketika player menutup mata.
-                            </p>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                           <h3>
-                                <a class = "h3-featured" href="projects.html">Unbound</a>
-                            </h3>
-                            <p>Unbound adalah project kreativitas berupa cerita yang ingin saya jadikan sebagai bahan komik atau novel. 
-                                bercerita tentang peradaban modern dari bumi 0.9 kardashev scale dan peradaban abad pertengah dari dunia fantasy bernama Elystra.</p>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <h3>
-                                <a class = "h3-featured" href="projects.html">Days in Between</a>
-                            </h3>>
-                            <p>Days in Between adalah salah satu dari project game yang masih berupa konsep.
-                                game yang akan berfokus pada kehidupan mahasiswa PENS
-                            </p>
-                        </article>
-                    </li>
-                </ol>
-            </section>
-        </main>
-        <footer>
-            <p>website dibuat oleh Azraf Muammar</p>
+            <!-- Kolom Gambar (Kanan) -->
+            <aside class="col-md-6">
+                <!-- Kotak abu-abu sebagai pengganti gambar -->
+                <div class="bg-secondary bg-opacity-25 d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <h2 class="text-uppercase text-dark" style="transform: rotate(-45deg);">FOTO KU</h2> <!--[cite: 1] -->
+                </div>
+            </aside>
+
+        </section>
+
+        <!-- BAGIAN PROYEK -->
+        <section class="mt-5 pt-5">
+            
+            <!-- Judul Seksi Proyek -->
+            <header class="text-center mb-5">
+                <h2>Featured Projects</h2> <!--[cite: 1] -->
+            </header>
+
+            <!-- Grid 3 Kolom untuk Kartu Proyek -->
+            <div class="row g-4">
+                
+                <!-- Proyek 1 -->
+                <article class="col-md-4">
+                    <div class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0">
+                        <h3 class="h5 text-center mb-3">Behind The Closed Eye</h3> <!--[cite: 1] -->
+                        <p class="small">A horror game with unique mechanism</p> <!--[cite: 1] -->
+                    </div>
+                </article>
+
+                <!-- Proyek 2 -->
+                <article class="col-md-4">
+                    <div class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0">
+                        <h3 class="h5 text-center mb-3">Unbound</h3> <!--[cite: 1] -->
+                        <p class="small">A story planned to be webnovel or game</p> <!--[cite: 1] -->
+                    </div>
+                </article>
+
+                <!-- Proyek 3 -->
+                <article class="col-md-4">
+                    <div class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0">
+                        <h3 class="h5 text-center mb-3">Days in Between</h3> <!--[cite: 1] -->
+                        <p class="small">Sim game concept, about life of PENS Student</p> <!--[cite: 1] -->
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN KAKI: (Opsional) Hak Cipta -->
+        <footer class="container text-center mt-5 mb-3 text-secondary">
+            <small>&copy; 2026 Azraf Portfolio</small>
         </footer>
-    </body>
+        
+    </main>
+    <script src="assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
