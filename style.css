@@ -1,7 +1,10 @@
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+
     z-index: 1000;
 
     background-color: rgba(23, 25, 28, 0.4);
@@ -9,8 +12,20 @@ header {
     -webkit-backdrop-filter: blur(16px);
 
     border-bottom: 1px solid rgba(220, 53, 69, 0.25);
+
+    transform: translateY(0);
+    transition: transform 0.3s ease;
 }
 
+/* Navbar disembunyikan */
+header.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+/* Karena header sekarang fixed */
+main {
+    padding-top: 100px;
+}
 .navbar .nav-link {
     color: #f5f5f5;
 }
@@ -159,11 +174,7 @@ header {
     }
 }
 
-/* ================================
-   PROJECTS PAGE
-   ================================ */
 
-/* Judul halaman */
 .projects-header {
     max-width: 900px;
     margin-left: auto;
@@ -179,7 +190,6 @@ header {
 }
 
 
-/* Daftar project */
 .projects-list {
     max-width: 1100px;
     margin-left: auto;
@@ -187,13 +197,12 @@ header {
 }
 
 
-/* Satu project */
 .project-item {
     position: relative;
 }
 
 
-/* Nomor project */
+
 .project-marker {
     min-height: 300px;
 }
@@ -221,7 +230,7 @@ header {
 }
 
 
-/* Garis di bawah nomor */
+
 .project-line {
     width: 25px;
     flex-grow: 1;
@@ -232,7 +241,7 @@ header {
 }
 
 
-/* Placeholder gambar */
+
 .project-image {
     min-height: 300px;
 
@@ -244,7 +253,7 @@ header {
 }
 
 
-/* Tag kategori */
+
 .project-tag {
     display: inline-block;
 
@@ -289,10 +298,6 @@ header {
 }
 
 
-/* ================================
-   RESPONSIVE
-   ================================ */
-
 @media (max-width: 767.98px) {
 
     .project-marker {
@@ -323,6 +328,6 @@ header {
 .project-image-content {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
