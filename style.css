@@ -1,10 +1,12 @@
+/* =========================================
+   HEADER & NAVBAR
+   ========================================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     z-index: 1000;
 
     background-color: rgba(23, 25, 28, 0.4);
@@ -17,27 +19,38 @@ header {
     transition: transform 0.3s ease;
 }
 
-/* Navbar disembunyikan */
 header.navbar-hidden {
     transform: translateY(-100%);
 }
 
-/* Karena header sekarang fixed */
 main {
     padding-top: 100px;
 }
+
 .navbar .nav-link {
     color: #f5f5f5;
 }
+
 .navbar .nav-link:hover {
     color: #dc3545;
 }
+
+.navbar .nav-link.active {
+    color: #ffffff;
+}
+
 .navbar .navbar-brand {
     color: #f5f5f5;
 }
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+
+/* =========================================
+   GENERAL / ABOUT
+   ========================================= */
 
 .col-md-4 .card {
     color: #f5f5f5;
@@ -51,7 +64,6 @@ main {
     width: 100%;
     max-width: 500px;
     height: 250px;
-
 }
 
 .poster-lomba {
@@ -63,6 +75,9 @@ main {
 }
 
 
+/* =========================================
+   TIMELINE
+   ========================================= */
 
 .timeline {
     position: relative;
@@ -70,27 +85,27 @@ main {
     padding: 20px 0;
 }
 
-/* Garis vertikal utama */
 .timeline-track {
     position: absolute;
     top: 20px;
     bottom: 20px;
     left: 50%;
     width: 3px;
+
     background-color: #dc3545;
+
     transform: translateX(-50%);
 }
 
-/* Satu item timeline */
 .timeline-item {
     display: grid;
     grid-template-columns: 1fr 60px 1fr;
     align-items: center;
+
     position: relative;
     min-height: 150px;
 }
 
-/* Tahun */
 .timeline-year {
     text-align: right;
     padding-right: 25px;
@@ -98,34 +113,38 @@ main {
 
 .timeline-year span {
     display: inline-block;
+
     background-color: rgba(108, 117, 125, 0.25);
+
     padding: 5px 15px;
 }
 
-/* Area bulatan */
 .timeline-marker {
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: relative;
     z-index: 2;
 }
 
-/* Bulatan merah */
 .timeline-dot {
     width: 20px;
     height: 20px;
+
     border-radius: 50%;
+
     background-color: #dc3545;
     border: 4px solid #212529;
 }
 
-/* Kotak informasi */
 .timeline-content {
     background-color: rgba(108, 117, 125, 0.25);
+
     padding: 15px;
-    text-align: center;
     margin-left: 15px;
+
+    text-align: center;
 }
 
 .timeline-content h5 {
@@ -138,70 +157,32 @@ main {
 }
 
 
-@media (max-width: 767.98px) {
-
-    .timeline {
-        padding-left: 20px;
-    }
-
-    .timeline-track {
-        left: 20px;
-        top: 20px;
-        bottom: 20px;
-    }
-
-    .timeline-item {
-        grid-template-columns: 40px 1fr;
-        min-height: 150px;
-    }
-
-    .timeline-year {
-        grid-column: 2;
-        grid-row: 1;
-        text-align: left;
-        padding: 0 0 8px 15px;
-    }
-
-    .timeline-marker {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-    }
-
-    .timeline-content {
-        grid-column: 2;
-        grid-row: 2;
-        margin-left: 15px;
-    }
-}
-
+/* =========================================
+   PROJECTS - GENERAL
+   ========================================= */
 
 .projects-header {
     max-width: 900px;
+
     margin-left: auto;
     margin-right: auto;
 }
 
-.projects-title {
-    display: inline-block;
-}
-
+.projects-title,
 .projects-description {
     display: inline-block;
 }
 
-
 .projects-list {
     max-width: 1100px;
+
     margin-left: auto;
     margin-right: auto;
 }
 
-
 .project-item {
     position: relative;
 }
-
-
 
 .project-marker {
     min-height: 300px;
@@ -215,6 +196,9 @@ main {
     justify-content: center;
     align-items: center;
 
+    position: relative;
+    z-index: 2;
+
     background-color: #212529;
     color: #dc3545;
 
@@ -224,23 +208,16 @@ main {
     font-weight: bold;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-    position: relative;
-    z-index: 2;
 }
-
-
 
 .project-line {
     width: 25px;
-    flex-grow: 1;
-
     min-height: 250px;
+
+    flex-grow: 1;
 
     background-color: #212529;
 }
-
-
 
 .project-image {
     min-height: 300px;
@@ -248,11 +225,18 @@ main {
     background-color: rgba(108, 117, 125, 0.25);
 }
 
+.project-image-content {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
 .project-placeholder {
     color: #212529;
 }
-
-
 
 .project-tag {
     display: inline-block;
@@ -261,16 +245,28 @@ main {
 
     padding: 0.25rem 0.5rem;
 
-    color: #212529;
+    color: rgb(223, 163, 163);
 
     font-size: 0.875rem;
     font-weight: bold;
 }
 
 
-/* Informasi project */
+/* =========================================
+   PROJECT INFORMATION
+   ========================================= */
+
 .project-info-label {
     color: #f5f5f5;
+}
+
+.project-info-text {
+    padding: 0.25rem 0.5rem;
+
+    color: rgb(223, 163, 163);
+
+    font-size: 0.875rem;
+    font-weight: bold;
 }
 
 .project-info-box {
@@ -290,15 +286,286 @@ main {
     background-color: #212529;
 }
 
-.project-info-text {
-    padding: 0.25rem 0.5rem;
 
-    font-size: 0.875rem;
+/* =========================================
+   THE CLOSED EYES
+   ========================================= */
+
+/*
+.page-monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.page-monospace p,
+.page-monospace h1,
+.page-monospace h2,
+.page-monospace h3,
+.page-monospace h4,
+.page-monospace h5 {
+    letter-spacing: 0.5px;
+}
+*/
+
+
+/* ---------- Typography & Title ---------- */
+
+.title-box-gray {
+    display: inline-block;
+
+    background-color: rgba(108, 117, 125, 0.5);
+
+    padding: 0.2rem 2.5rem;
+
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+}
+
+.game-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.subtitle-box-inverted {
+    display: inline-block;
+
+    background-color: #f5f5f5;
+    color: #212529;
+
+    padding: 2px 10px;
+
+    font-size: 0.85rem;
     font-weight: bold;
 }
 
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+.heading-box {
+    display: inline-block;
+
+    background-color: rgba(108, 117, 125, 0.5);
+
+    padding: 0.5rem 3rem;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.content-box-gray {
+    max-width: 900px;
+
+    background-color: rgba(108, 117, 125, 0.25);
+
+    padding: 2.5rem;
+}
+
+
+/* ---------- Dividers ---------- */
+
+.divider-thick {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background-color: #111;
+}
+
+.divider-thick::after {
+    content: "";
+
+    width: 100%;
+    height: 8px;
+
+    background-color: #dc3545;
+}
+
+.divider-barbell {
+    width: 100%;
+    height: 8px;
+
+    position: relative;
+
+    margin: 5rem 0;
+
+    background-color: #dc3545;
+
+    border-radius: 4px;
+}
+
+.divider-barbell::before,
+.divider-barbell::after {
+    content: "";
+
+    width: 35px;
+    height: 35px;
+
+    position: absolute;
+    top: 50%;
+
+    background-color: #111;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+}
+
+.divider-barbell::before {
+    left: -10px;
+}
+
+.divider-barbell::after {
+    right: -10px;
+}
+
+
+/* ---------- Flowchart ---------- */
+
+.flowchart-wrapper {
+    max-width: 700px;
+}
+
+.flowchart-pill {
+    display: inline-block;
+
+    min-width: 180px;
+
+    background-color: rgba(108, 117, 125, 0.5);
+
+    padding: 12px 30px;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.flowchart-line-vertical,
+.flowchart-line-vertical-drop {
+    width: 1px;
+    height: 35px;
+
+    background-color: #f5f5f5;
+}
+
+.flowchart-line-vertical {
+    margin: 0 auto;
+}
+
+.flowchart-line-horizontal {
+    width: 60%;
+    height: 1px;
+
+    margin: 0 auto;
+
+    background-color: #f5f5f5;
+}
+
+.flowchart-branches .flowchart-branch {
+    width: 45%;
+}
+
+
+/* ---------- Info Cards & Placeholders ---------- */
+
+.info-card {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgba(108, 117, 125, 0.25);
+
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+}
+
+.info-card h5 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.info-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.placeholder-box {
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(108, 117, 125, 0.25);
+
+    color: #f5f5f5;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.placeholder-box-tall {
+    min-height: 400px;
+}
+
+
+/* =========================================
+   RESPONSIVE - MAX WIDTH 767.98px
+   ========================================= */
 
 @media (max-width: 767.98px) {
+
+    /* ---------- Timeline ---------- */
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-track {
+        left: 20px;
+        top: 20px;
+        bottom: 20px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 40px 1fr;
+        min-height: 150px;
+    }
+
+    .timeline-year {
+        grid-column: 2;
+        grid-row: 1;
+
+        padding: 0 0 8px 15px;
+
+        text-align: left;
+    }
+
+    .timeline-marker {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+        grid-row: 2;
+
+        margin-left: 15px;
+    }
+
+
+    /* ---------- Projects ---------- */
 
     .project-marker {
         min-height: 300px;
@@ -324,10 +591,14 @@ main {
         max-width: 100%;
     }
 
-}
-.project-image-content {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+
+    /* ---------- The Closed Eyes ---------- */
+
+    .flowchart-line-horizontal {
+        width: 80%;
+    }
+
+    .game-title {
+        font-size: 2rem;
+    }
 }
