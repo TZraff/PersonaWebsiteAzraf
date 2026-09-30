@@ -1,4 +1,31 @@
 /* =========================================
+   GLOBAL TYPOGRAPHY
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.heading-box,
+.title-box-gray,
+.game-title {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.page-monospace {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* =========================================
    HEADER & NAVBAR
    ========================================= */
 
@@ -38,7 +65,12 @@ main {
 .navbar .nav-link.active {
     color: #ffffff;
 }
-
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px solid #dc3545;
+}
 .navbar .navbar-brand {
     color: #f5f5f5;
 }
@@ -47,13 +79,29 @@ main {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.scroll-reveal {
+    opacity: 0;
+    filter: blur(8px) grayscale(1);
+    transform: translateY(25px) scale(0.99);
 
+    transition:
+        opacity 0.7s ease,
+        filter 0.7s ease,
+        transform 0.7s ease;
+}
+
+.scroll-reveal.show {
+    opacity: 1;
+    filter: blur(0) grayscale(0);
+    transform: translateY(0) scale(1);
+}
 /* =========================================
    GENERAL / ABOUT
    ========================================= */
 
 .col-md-4 .card {
     color: #f5f5f5;
+    text-decoration: none;
 }
 
 .foto-about {
@@ -71,10 +119,49 @@ main {
 }
 
 .kotak-home {
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(108, 117, 125, 0.25);
+    max-width: 500px;   /* Atur angka ini (misal: 400px atau 500px) sesuai ukuran kecil yang Anda inginkan */
+    margin: 0 auto;
+}
+
+.kotak-home img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
+.kotak-home .border {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important; /* Menghilangkan jarak putih di sekeliling gambar */
+
+}
+
+.kolom-teks-tengah {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.photo-caption {
+    display: block;
+    width: 100%;
+
+    margin: 0;
+    padding: 6px 10px;
+
+    color: rgba(245, 245, 245, 0.55);
+    font-size: 0.7rem;
+    text-align: left;
+}
 /* =========================================
    TIMELINE
    ========================================= */
@@ -245,7 +332,7 @@ main {
 
     padding: 0.25rem 0.5rem;
 
-    color: rgb(223, 163, 163);
+    color: rgb(225, 125, 125);
 
     font-size: 0.875rem;
     font-weight: bold;
@@ -263,7 +350,7 @@ main {
 .project-info-text {
     padding: 0.25rem 0.5rem;
 
-    color: rgb(223, 163, 163);
+    color: rgb(225, 125, 125);
 
     font-size: 0.875rem;
     font-weight: bold;
@@ -462,9 +549,23 @@ main {
 
 .flowchart-line-horizontal {
     width: 60%;
-    height: 1px;
+    height: 35px;
 
+    position: relative;
     margin: 0 auto;
+
+    background-color: transparent;
+}
+
+.flowchart-line-horizontal::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
 
     background-color: #f5f5f5;
 }
@@ -601,4 +702,129 @@ main {
     .game-title {
         font-size: 2rem;
     }
+}
+
+/* =========================================
+   STYLE KHUSUS HALAMAN: SOCIAL
+   ========================================= */
+
+/* Class Font Monospace (Jika belum ada dari halaman sebelumnya) */
+
+.tracking-wide {
+    letter-spacing: 2px;
+}
+.heading-box {
+    display: inline-block;
+    background-color: rgba(108, 117, 125, 0.5);
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* Kotak Terminal Status */
+.social-terminal {
+    background-color: rgba(108, 117, 125, 0.25);
+    padding: 2rem;
+    max-width: 550px;
+}
+
+/* Area Wrapper Zig-zag */
+.social-wrapper {
+    max-width: 800px;
+}
+
+/* Kartu Detail Sosial Media */
+.social-card {
+    background-color: rgba(108, 117, 125, 0.25);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Angka Bulat di sebelah Kartu */
+.social-number {
+    width: 55px;
+    height: 55px;
+    background-color: #212529;
+    color: #dc3545;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive: Memperbaiki tata letak di Layar HP (Mobile) */
+@media (max-width: 767.98px) {
+    /* Membuat item sebelah kanan berubah orientasi agar seragam rata kiri di HP */
+    .social-item-right {
+        flex-direction: row-reverse;
+        justify-content: flex-start !important;
+    }
+    
+    /* Memindahkan margin angka bulat ketika dibalik */
+    .social-item-right .social-number {
+        margin-left: 0 !important;
+        margin-right: 1rem !important;
+    }
+    
+    .social-item-left .social-number {
+        margin-right: 1rem !important;
+    }
+
+    .social-card {
+        padding: 1.2rem;
+    }
+}
+
+
+
+.background-web {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 300px;
+
+    transform: translate(-50%, -50%);
+
+    opacity: 0.02;
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.background-web img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+.social-wrapper {
+    position: relative;
+}
+.social-wrapper::before,
+.social-wrapper::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background-color: #dc3545;
+}
+
+.social-wrapper::before {
+    left: -30px;
+}
+
+.social-wrapper::after {
+    right: -30px;
 }
