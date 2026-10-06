@@ -716,6 +716,7 @@ main {
     padding: 1.5rem 2rem;
     width: 100%;
     max-width: 450px;
+    z-index: 10;
 }
 
 /* Angka Bulat di sebelah Kartu */
