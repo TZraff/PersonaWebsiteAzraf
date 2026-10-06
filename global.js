@@ -23,6 +23,8 @@ window.addEventListener("scroll", function () {
 
     lastScrollY = currentScrollY;
 });
+
+
 const revealElements = document.querySelectorAll(
     "main section, main .divider-thick, main .divider-barbell"
 );
