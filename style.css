@@ -1,3 +1,19 @@
+/*
+ * PORTFOLIO STYLESHEET
+ * --------------------------------------------------
+ * Organized by:
+ * 1. Global typography
+ * 2. Header & navigation
+ * 3. General / About
+ * 4. Timeline
+ * 5. Projects
+ * 6. The Closed Eyes
+ * 7. Responsive rules
+ * 8. Social
+ * 9. Background decoration
+ * --------------------------------------------------
+ */
+
 /* =========================================
    GLOBAL TYPOGRAPHY
    ========================================= */
@@ -132,7 +148,6 @@ main {
     display: block;
 }
 
-
 .kotak-home .border {
     height: 100%;
     display: flex;
@@ -243,7 +258,6 @@ main {
     margin-bottom: 0;
 }
 
-
 /* =========================================
    PROJECTS - GENERAL
    ========================================= */
@@ -338,7 +352,6 @@ main {
     font-weight: bold;
 }
 
-
 /* =========================================
    PROJECT INFORMATION
    ========================================= */
@@ -373,26 +386,9 @@ main {
     background-color: #212529;
 }
 
-
 /* =========================================
    THE CLOSED EYES
    ========================================= */
-
-/*
-.page-monospace {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.page-monospace p,
-.page-monospace h1,
-.page-monospace h2,
-.page-monospace h3,
-.page-monospace h4,
-.page-monospace h5 {
-    letter-spacing: 0.5px;
-}
-*/
-
 
 /* ---------- Typography & Title ---------- */
 
@@ -449,7 +445,6 @@ main {
 
     padding: 2.5rem;
 }
-
 
 /* ---------- Dividers ---------- */
 
@@ -512,7 +507,6 @@ main {
     right: -10px;
 }
 
-
 /* ---------- Flowchart ---------- */
 
 .flowchart-wrapper {
@@ -574,7 +568,6 @@ main {
     width: 45%;
 }
 
-
 /* ---------- Info Cards & Placeholders ---------- */
 
 .info-card {
@@ -620,7 +613,6 @@ main {
     min-height: 400px;
 }
 
-
 /* =========================================
    RESPONSIVE - MAX WIDTH 767.98px
    ========================================= */
@@ -665,7 +657,6 @@ main {
         margin-left: 15px;
     }
 
-
     /* ---------- Projects ---------- */
 
     .project-marker {
@@ -692,7 +683,6 @@ main {
         max-width: 100%;
     }
 
-
     /* ---------- The Closed Eyes ---------- */
 
     .flowchart-line-horizontal {
@@ -707,20 +697,6 @@ main {
 /* =========================================
    STYLE KHUSUS HALAMAN: SOCIAL
    ========================================= */
-
-/* Class Font Monospace (Jika belum ada dari halaman sebelumnya) */
-
-.tracking-wide {
-    letter-spacing: 2px;
-}
-.heading-box {
-    display: inline-block;
-    background-color: rgba(108, 117, 125, 0.5);
-    padding: 0.5rem 3rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-}
 
 /* Kotak Terminal Status */
 .social-terminal {
@@ -765,13 +741,13 @@ main {
         flex-direction: row-reverse;
         justify-content: flex-start !important;
     }
-    
+
     /* Memindahkan margin angka bulat ketika dibalik */
     .social-item-right .social-number {
         margin-left: 0 !important;
         margin-right: 1rem !important;
     }
-    
+
     .social-item-left .social-number {
         margin-right: 1rem !important;
     }
@@ -780,8 +756,6 @@ main {
         padding: 1.2rem;
     }
 }
-
-
 
 .background-web {
     position: fixed;
