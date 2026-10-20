@@ -58,22 +58,22 @@
             
             <!-- Kolom Teks (Kiri) -->
             <article class="col-md-6 text-center text-md-start pe-md-5">
-                <h1 class="mb-4 text-uppercase">WELCOME TO MY SITE</h1> <!--[cite: 1] -->
+                <h1 class="mb-4 text-uppercase">WELCOME TO MY SITE</h1>
                 <p class="fs-5">
-                    I am a Informatics Engineering student from<br> <!--[cite: 1] -->
-                    Electronic Engineering Polytechnic Institute of<br> <!--[cite: 1] -->
-                    Surabaya<br> <!--[cite: 1] -->
-                    currently, i am working on several projects <!--[cite: 1] -->
+                    I am a Informatics Engineering student from<br>
+                    Electronic Engineering Polytechnic Institute of<br>
+                    Surabaya<br>
+                    currently, i am working on several projects
                 </p>
             </article>
 
             <!-- Kolom Gambar (Kanan) -->
             <aside class="col-md-6">
-                <!-- Kotak abu-abu sebagai pengganti gambar -->
-                <div class="kotak-home bg-secondary bg-opacity-25 justify-content-center align-items-center">
+                <!-- Kotak abu-abu diubah menjadi figure semantik -->
+                <figure class="kotak-home bg-secondary bg-opacity-25 justify-content-center align-items-center m-0">
                     <img src="assets/foto-home.jpeg" alt="pria tampan">
-                    <p class="photo-caption">Photo by: Afrizzal Dede Pratama Hartono</p>
-                </div>
+                    <figcaption class="photo-caption">Photo by: Afrizzal Dede Pratama Hartono</figcaption>
+                </figure>
             </aside>
 
         </section>
@@ -81,10 +81,8 @@
         <!-- BAGIAN PROYEK -->
         <section class="mt-5 pt-5">
             
-            <!-- Judul Seksi Proyek -->
-            <div class="text-center mb-5">
-                <h2>Featured Projects</h2> <!--[cite: 1] -->
-            </div>
+            <!-- Judul Seksi Proyek (Div wrapper dihapus, kelas dipindah langsung ke h2) -->
+            <h2 class="text-center mb-5">Featured Projects</h2>
 
             <!-- Grid 3 Kolom untuk Kartu Proyek -->
             <div class="row g-4">
@@ -92,24 +90,24 @@
                 <!-- Proyek 1 -->
                 <article class="col-md-4">
                     <a class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0" href="projects.html#behind-the-closed-eyes">
-                        <h3 class="h5 text-center mb-3">Behind The Closed Eye</h3> <!--[cite: 1] -->
-                        <p class="small">A horror game with unique mechanism</p> <!--[cite: 1] -->
+                        <h3 class="h5 text-center mb-3">Behind The Closed Eye</h3>
+                        <p class="small">A horror game with unique mechanism</p>
                     </a>
                 </article>
 
                 <!-- Proyek 2 -->
                 <article class="col-md-4">
                     <a class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0" href="projects.html#unbound--">
-                        <h3 class="h5 text-center mb-3">Unbound</h3> <!--[cite: 1] -->
-                        <p class="small">A story planned to be webnovel or game</p> <!--[cite: 1] -->
+                        <h3 class="h5 text-center mb-3">Unbound</h3>
+                        <p class="small">A story planned to be webnovel or game</p>
                     </a>
                 </article>
 
                 <!-- Proyek 3 -->
                 <article class="col-md-4">
-                    <a class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0" href="projects.html#days-in-between" >
-                        <h3 class="h5 text-center mb-3">Days in Between</h3> <!--[cite: 1] -->
-                        <p class="small">Sim game concept, about life of PENS Student</p> <!--[cite: 1] -->
+                    <a class="card bg-secondary bg-opacity-25 h-100 p-4 border-0 rounded-0" href="projects.html#days-in-between">
+                        <h3 class="h5 text-center mb-3">Days in Between</h3>
+                        <p class="small">Sim game concept, about life of PENS Student</p>
                     </a>
                 </article>
 
