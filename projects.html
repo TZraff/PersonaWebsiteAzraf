@@ -8,6 +8,8 @@
     <link rel="icon" href="assets/logo TZraff.jpeg">
     <link href="assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="global.js" defer></script>
   </head>
 
   <body class="bg-dark text-light">
@@ -44,7 +46,6 @@
               <a class="nav-link text-uppercase" href="about.html">ABOUT ME</a>
               <a class="nav-link text-uppercase" href="projects.html">PROJECTS</a>
               <a class="nav-link text-uppercase" href="dedicated.html">DEDICATED</a>
-              
               <a class="nav-link text-uppercase" href="social.html">SOCIAL</a>
             </div>
           </div>
@@ -70,6 +71,14 @@
         <div class="projects-description bg-secondary bg-opacity-25 py-2 px-4">
           A collection of games, stories, and ideas I am building and exploring
         </div>
+
+        <div class="project-filter d-flex flex-wrap justify-content-center gap-2 mt-4" id="filter-proyek">
+          <button type="button" class="filter-btn aktif" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="game">Game</button>
+          <button type="button" class="filter-btn" data-filter="writing">Writing</button>
+          <button type="button" class="filter-btn" data-filter="system">System</button>
+        </div>
+        <p id="hasil-filter" class="text-center text-secondary mt-3 mb-0"></p>
       </section>
 
 
@@ -78,7 +87,7 @@
 
 
         <!-- PROJECT 1: BEHIND THE CLOSED EYES -->
-        <section id="behind-the-closed-eyes "class="project-item row mb-5 pb-5">
+        <section id="behind-the-closed-eyes" class="project-item row mb-5 pb-5" data-kategori="game">
 
           <!-- Nomor & Garis -->
           <div class="project-marker col-2 col-md-1 d-flex flex-column align-items-center">
@@ -152,7 +161,7 @@
 
 
         <!-- PROJECT 2: UNBOUND -->
-        <section id="unbound--" class="project-item row mb-5 pb-5">
+        <section id="unbound--" class="project-item row mb-5 pb-5" data-kategori="writing">
 
           <!-- Teks -->
           <div class="col-md-6 order-3 order-md-1 d-flex flex-column justify-content-center px-md-4">
@@ -227,7 +236,7 @@
 
 
         <!-- PROJECT 3: DAYS IN BETWEEN -->
-        <section class="project-item row mb-5 pb-5" id="days-in-between">
+        <section class="project-item row mb-5 pb-5" id="days-in-between" data-kategori="game">
 
           <!-- Nomor & Garis -->
           <div class="project-marker col-2 col-md-1 d-flex flex-column align-items-center">
@@ -302,7 +311,7 @@
 
 
         <!-- PROJECT 4: DISCONTINUITY -->
-        <section class="project-item row mb-5 pb-5">
+        <section class="project-item row mb-5 pb-5" data-kategori="game">
 
           <!-- Teks -->
           <div class="col-md-6 order-3 order-md-1 d-flex flex-column justify-content-center px-md-4">
@@ -376,7 +385,7 @@
 
 
         <!-- PROJECT 5: EEPIX OS -->
-        <section class="project-item row mb-5 pb-5">
+        <section class="project-item row mb-5 pb-5" data-kategori="system">
 
           <!-- Nomor & Garis -->
           <div class="project-marker col-2 col-md-1 d-flex flex-column align-items-center">
@@ -453,7 +462,6 @@
     </footer>
 
 
-    <script src="assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="global.js"></script>
+    
   </body>
 </html>
